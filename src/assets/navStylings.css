@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+nav{
+    height: 90px;
+    background-image:linear-gradient(45deg,red, salmon , white);
+}
+nav>ol{
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    align-items: center;
+}
+
+nav>ol>li{
+    color: aliceblue;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 25px;
+    background-color: aqua;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 4px 10px 10px black;
+
+}
