@@ -1,0 +1,41 @@
+form {
+  height: 80vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-image: url("https://i.pinimg.com/1200x/6b/e1/35/6be13526cd3189dc14f5aa8a0984647a.jpg");
+}
+fieldset {
+  border: none;
+  border-radius: 10px 50px;
+  padding: 80px 40px;
+  width: 300px;
+  backdrop-filter: blur(20px);
+  box-shadow: 5px 5px 5px 5px aliceblue;
+}
+
+form label {
+  color: aliceblue;
+  font-weight: bold;
+  font-style: italic;
+  margin-right: 10px;
+}
+form label:first-of-type::after {
+  content: "🙎🏻";
+}
+form label:last-of-type::after {
+  content: "🔐";
+}
+.btn{
+    display: flex;
+    justify-content: center;
+}
+.btn button{
+    margin: 10px;
+    padding: 10px 30px;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
