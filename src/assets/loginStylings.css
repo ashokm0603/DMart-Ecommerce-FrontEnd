@@ -1,5 +1,5 @@
 form {
-  height: 80vh;
+  padding-top: 20px;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -22,12 +22,12 @@ form label {
   font-style: italic;
   margin-right: 10px !important;
 }
-form label:first-of-type::after {
+/* form label:first-of-type::after {
   content: "🙎🏻";
 }
 form label:last-of-type::after {
   content: "🔐";
-}
+} */
 .btn{
     display: flex;
     justify-content: center;
@@ -42,4 +42,24 @@ form label:last-of-type::after {
 
 form span{
   color: azure;
+}
+
+
+
+form h1{
+  text-shadow: 3px 3px 3px aliceblue;
+  text-align: center;
+  color: antiquewhite;
+  font-style: italic;
+  margin-bottom: 50px;
+}
+
+form h1::first-letter{
+  font-size: 70px;
+  color: red;
+}
+
+
+a{
+  text-decoration-line: none !important;
 }

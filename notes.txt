@@ -1,0 +1,22 @@
+States In React : 
+------------------
+    ->States are used to hold the data/values
+    ->States are mutable in Nature
+    ->States are present only Class based component
+
+
+Hooks(16.8 version) : 
+---------------------
+        ->Hooks are used to make Function based component as a State full / dynamic 
+        ->Ex: useState() , useEffect() , useNavigate(), useMemo() , useContext() , useCallback(), useReducer() ..etc 
+
+
+
+
+Forms: 
+-----       
+    ->Forms are used to collect use data digitally 
+    ->In react We have two types of Forms 
+    1. Controlled Forms -> here we handle form data using useState() and onChange()
+
+    2. UnControlled Forms ->here we handle form data using ref's and useRef()  
