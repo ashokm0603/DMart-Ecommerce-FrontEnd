@@ -1,11 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Carousel } from "react-bootstrap"
+import { Carousel, Row,Col } from "react-bootstrap"
 
 const Home = () => {
 
     const [products, setProducts] = useState([])
-
 
     const fetchProducts = async () => {
         try {
@@ -20,8 +19,7 @@ const Home = () => {
 
     useEffect(() => {
         fetchProducts()
-    })
-
+    },[])
 
     return (
         <div>
@@ -34,7 +32,6 @@ const Home = () => {
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, beatae? Eligendi, deserunt! Accusamus, nesciunt? Expedita deleniti voluptates sint porro aperiam temporibus? Nihil magni labore commodi quas porro eligendi. Ea, eius.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
-
                     <Carousel.Item>
                         <img src="https://graphicdesigneye.com/images/studio-shot-product-images.jpg" style={{ height: 500, width: "100vw" }} alt="" />
                         <Carousel.Caption>
@@ -50,6 +47,40 @@ const Home = () => {
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
+            </section>
+            <section>
+                <Row>
+                    {
+                        products.length>0?(
+                            products.map((item)=>(
+                                <Col>
+                                <div className="card">
+                                    <div className="card-header">
+                                        <img src={item.thumbnail} alt="" />
+                                    </div>
+                                    <div className="card-body">
+                                        <h2>{item.title}</h2>
+                                        <h2>{item.brand}</h2>
+                                        <h4>Ratings :{item.rating}</h4>
+                                        <h4 style={{width:"190px"}} className="bg-success-subtle p-2">Price :{item.price}</h4>
+                                        <p>
+                                            {item.description}
+                                        </p>
+                                    </div>
+                                    <div className="card-footer d-flex justify-content-center">
+                                        <button className="btn btn-success mx-3">Buy</button>
+                                        <button className="btn btn-warning">Cart</button>
+                                    </div>
+                                </div>
+                                </Col>
+                            ))
+                        ):(
+                            <div>
+                            <h4>Products not Found</h4>
+                            </div>
+                        )
+                    }
+                </Row>
             </section>
         </div>
     )
