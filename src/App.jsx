@@ -1,11 +1,13 @@
 import NavBar from "./NavBar";
-import Login from "./pages/Login";
+import Register from "./pages/Register";
+import "./assets/loginStylings.css"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 function App() {
   return (
     <div>
-      <NavBar/>
+      <NavBar />
       <h1>welcome to React JS</h1>
-      <Login/>
+      <Register />
     </div>
   )
 

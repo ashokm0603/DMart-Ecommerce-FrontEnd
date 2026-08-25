@@ -10,8 +10,8 @@ form {
 fieldset {
   border: none;
   border-radius: 10px 50px;
-  padding: 80px 40px;
-  width: 300px;
+  padding: 80px 40px !important;
+  width: 600px;
   backdrop-filter: blur(20px);
   box-shadow: 5px 5px 5px 5px aliceblue;
 }
@@ -20,7 +20,7 @@ form label {
   color: aliceblue;
   font-weight: bold;
   font-style: italic;
-  margin-right: 10px;
+  margin-right: 10px !important;
 }
 form label:first-of-type::after {
   content: "🙎🏻";
@@ -38,4 +38,8 @@ form label:last-of-type::after {
     font-family: monospace;
     font-weight: bold;
     font-size: 18px;
+}
+
+form span{
+  color: azure;
 }
