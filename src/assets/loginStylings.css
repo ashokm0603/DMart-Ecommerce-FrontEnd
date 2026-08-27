@@ -63,3 +63,8 @@ form h1::first-letter{
 a{
   text-decoration-line: none !important;
 }
+
+
+.product-container{
+  background-color: gray;
+}

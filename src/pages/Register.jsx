@@ -2,7 +2,10 @@
 import { useState } from "react"
 import { Col, Form, Row } from "react-bootstrap"
 import { useNavigate } from "react-router-dom"
-import { toast, ToastContainer } from "react-toastify"
+import { toast, ToastContainer } from "react-toastify";
+
+import axios  from 'axios';
+
 const Register = () => {
 
   const navigate=useNavigate()
@@ -19,10 +22,13 @@ const Register = () => {
     }
   )
 
-  const handleRegister = (e) => {
+  const handleRegister = async(e) => {
     try {
       e.preventDefault()
-      console.log(registerDetails);
+
+     const response= await axios.post("http://localhost:5000/api/register",registerDetails)
+
+      console.log(response);
       toast.success("register successful")
       setRegisterDetails(
         {

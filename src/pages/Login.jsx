@@ -2,6 +2,7 @@ import { useState } from "react";
 import "../assets/loginStylings.css"
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 function Login() {
     const navigate = useNavigate()
@@ -9,13 +10,19 @@ function Login() {
     const [password, setPassword] = useState("");
 
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         try {
             e.preventDefault()
             console.log(username);
             console.log(password);
-            localStorage.setItem("userName", username)
-            localStorage.setItem("Password", password)
+
+            const response = await axios.post('http://localhost:5000/api/login', { email: username, password: password })
+
+
+            console.log(response);
+
+            localStorage.setItem("token", response.data.Token)
+
             toast.success("login successful");
 
             setTimeout(() => {
